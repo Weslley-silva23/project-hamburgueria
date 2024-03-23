@@ -186,7 +186,7 @@ if(IsOpen){
 function checkrestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 17 && hora < 22;
+    return hora <= 22 && hora > 17;
 }
 
 const Spanitem = document.getElementById("spanItem") 
@@ -194,10 +194,10 @@ const IsOpen =  checkrestaurantOpen();
 
 
 if (IsOpen) {
-    Spanitem.classList.remove("bg-red-500");
+    Spanitem.classList.remove("bg-red-600");
     Spanitem.classList.add("bg-green-600")
 } else{
    
-    Spanitem.classList.add("bg-red-500")
+    Spanitem.classList.add("bg-red-600")
     Spanitem.classList.remove("bg-green-600")
 }
